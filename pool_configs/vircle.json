@@ -1,0 +1,71 @@
+{
+    "enabled": true,
+    "coin": "vircle.json",
+
+    "auxes": [ // Defines auxillery coins
+    ],
+    "address": "SMKz4KVqhVMkWfrB45ArUZQJQ8v7wkhUPF",
+
+    "rewardRecipients": {
+        "SMKz4KVqhVMkWfrB45ArUZQJQ8v7wkhUPF": 0
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 600,
+        "minimumPayment": 9999999999,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 9902,
+            "user": "chain",
+            "password": "999000"
+        }
+    },
+
+    "ports": {
+        "3008": {
+            "diff": 8
+        },
+        "3032": {
+            "diff": 32,
+            "varDiff": {
+                "minDiff": 8,
+                "maxDiff": 512,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "3256": {
+            "diff": 256
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 9902,
+            "user": "chain",
+            "password": "999000"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 9900,
+        "disableTransactions": false
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "ltc",
+        "checkPassword": false,
+        "autoCreateWorker": false
+    }
+
+}
